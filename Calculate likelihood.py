@@ -1,5 +1,6 @@
 import numpy as np
 import mpmath
+from numpy import exp, cos, sin, sqrt, mean, sum, log, mean
 
 
 def Series(A=[0,9,.0005], T=[0,18,.0005], n=2000, r=1e-50, dps=50):
