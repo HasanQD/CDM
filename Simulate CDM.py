@@ -11,8 +11,8 @@ def SimCDM(params, dt=.001, n=100):
     ----------
     params : list
         A list of real numbers containing the parameter values as [decision criterion, multiplier for decision criterion range, 
-        drift length, drift angle, multiplier for the radial component of the drift, multiplier for the tangental component of the drift,
-        non-decision time, range of the non-decision time variability]
+        drift length, drift angle, multiplier for the standard deviation of radial component of the drift, multiplier for the 
+        standard deviation of tangental component of the drift, non-decision time, range of the non-decision time variability]
 
     dt: float
         The time step.
