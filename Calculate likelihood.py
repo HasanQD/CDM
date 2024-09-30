@@ -3,10 +3,10 @@ import mpmath
 from numpy import exp, cos, sin, sqrt, mean, sum, log, mean
 
 
-def Series(A=[0,9,.0005], T=[0,18,.0005], n=2000, r=1e-50, dps=50):
+def Series(A=[.0005,9,.0005], T=[0,18,.0005], n=2000, r=1e-50, dps=50):
     
     """
-    Series(a=[0,9,.0005], t=[0,18,.0005], n_terms=2000, dps=50)
+    Series(a=[.0005,9,.0005], t=[0,18,.0005], n_terms=2000, dps=50)
     
     Calculates the series used in the likelihood function of the CDM.
     
@@ -14,11 +14,11 @@ def Series(A=[0,9,.0005], T=[0,18,.0005], n=2000, r=1e-50, dps=50):
     ----------
     A: list
         A list of real numbers as [lower bound of the range, higher bound of the range, step size] indicating the range of the decision criterion 
-        at which the series needs to be calculated 
+        at which the series needs to be calculated (The range should contain only positive values).
 
     T: list
         A list of real numbers as [lower bound of the range, higher bound of the range, step size] indicating the range of the response time
-        at which the series needs to be calculated.
+        at which the series needs to be calculated (The range should contain only non-negative values).
         
     n: int
         Maximum number of terms that the series will be calculated.
